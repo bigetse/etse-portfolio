@@ -220,7 +220,7 @@
                   <img src="images/safetoken-page-scroll.gif">
                 </div>
                 <div class="shot">
-                  <img src="images/safetoken-pages.gif">
+                  <img src="images/safetoken-userdrk.jpg">
                 </div>
                 <div class="shot">
                   <img src="images/safetoken-codegen.gif">
@@ -234,6 +234,19 @@
                 </div>
                 <div class="shot">
                   <img src="images/safetoken-code-use.gif">
+                </div>
+              </div>
+
+              <!--3x row-->
+              <div class="shots-3xrow">
+                <div class="shot">
+                  <img src="images/safetoken-profile.jpg">
+                </div>
+                <div class="shot">
+                  <img src="images/safetoken-pages.gif">
+                </div>
+                <div class="shot">
+                  <img src="images/safetoken-userlgt.jpg">
                 </div>
               </div>
 
@@ -253,7 +266,13 @@
         </div>
       </div>
 
-      <!--- About me --->
+      <!--pop-up modal-->
+      <div class="modal" id="modal">
+        <span class="close-btn" id="close-btn">&times;</span>
+        <img id="modal-img" src="">
+      </div>
+
+      <!--- about me --->
       <div class="section" id="about-me">
         <div class="section-wrap" id="about-wrap">
 
@@ -428,7 +447,33 @@
 
     </main>
 
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+    const images = document.querySelectorAll('.shots-grid img');
+    const modal = document.getElementById('modal');
+    const modalImg = document.getElementById('modal-img');
+    const closeBtn = document.getElementById('close-btn');
 
+    images.forEach(img => {
+        img.addEventListener('click', function() {
+            modalImg.src = this.src;  // Update modal image
+            modal.classList.add('active');  // Show modal
+        });
+    });
+
+    // Close modal when clicking outside the image
+    modal.addEventListener('click', function(event) {
+        if (event.target !== modalImg) {
+            modal.classList.remove('active');
+        }
+    });
+
+    // Close modal when clicking the close button
+    closeBtn.addEventListener('click', function() {
+        modal.classList.remove('active'); 
+    });
+});
+    </script>
   </body>
 </html>
 
