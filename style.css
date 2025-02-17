@@ -232,19 +232,19 @@ h3{
 .shots-grid{
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 16px;
 }
 
 .shots-3xrow, .shots-2xrow{
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: 16px;
   box-sizing: border-box;
 }
 
 .shots-grid img{
   max-width: 100%;
-  border-radius: 16px;
+  border-radius: 8px;
   min-width: 200px;
   width: 100%;
   height: auto; 
@@ -269,7 +269,7 @@ h3{
   display: flex;
   background-color: #343434;
   padding: 1.5rem 2.5rem;
-  border-radius: 16px;
+  border-radius: 12px;
   justify-content: space-between;
   margin-top: 12px;
   align-items: center;
@@ -304,7 +304,7 @@ h3{
   display: flex;
   background-color: #343434;
   padding: 1.5rem 2.5rem;
-  border-radius: 16px;
+  border-radius: 12px;
   justify-content: space-between;
   margin-top: 12px;
   align-items: center;
@@ -381,7 +381,7 @@ h3{
   background-color: #329BE6;
   padding: 2.5rem;
   margin-bottom: 5rem;
-  border-radius: 24px;
+  border-radius: 16px;
   justify-content: space-between;
   margin-top: 12px;
   align-items: center;
