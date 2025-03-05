@@ -20,7 +20,7 @@ body{
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: Space Grotesk, monospace;
+  font-family: Bodoni Moda, monospace;
   color: rgb(235, 235, 235);
   font-weight: 400;
   font-size: 3rem;
@@ -31,6 +31,8 @@ a {
   text-decoration: none; 
   cursor: pointer;
   color: rgb(235, 235, 235);
+  margin: 0;
+  padding: 0;
 }
 
 header{
@@ -107,19 +109,59 @@ nav {
 
 .hero{
   display: flex;
-  justify-content: center;
+  height: 50vh;
+  max-height: 50%vh;
+  min-height: auto;
+  width: 100%;
 }
 
 .hero-content {
+  position: relative;
   opacity: 0;
   transform: translateY(-5%);
   animation: hero-content 0.5s ease-in forwards;
-  max-width: 740px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  text-align: center;
-  align-items: center;
+  gap: 120px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.vert-decor {
+  position: absolute;
+  width: 1px;
+  height: 30vh;
+  background-color: #343434;
+  top: 8px;
+  right: 16px;
+}
+
+.hor-decor {
+  position: absolute;
+  width: 30vw;
+  height: 1px;
+  background-color: #343434;
+  top: 8px;
+  right: 16px;
+}
+
+.hero-title h1 {
+  max-width: 500px;
+  font-size: 2.5rem;
+}
+
+.hero-bottom {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  gap: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  justify-content: space-between;
+}
+
+.hero-description p {
+  max-width: 400px;
 }
 
 @keyframes hero-content {
@@ -133,37 +175,13 @@ nav {
   }
 }
 
-.hero-content h1 {
-  font-weight: 500;
-}
-
-.hero-content p {
-  margin: 0px 6.25rem;
-}
-
-.name-card{
-  padding: 0.5rem 1rem;
-  margin-bottom: 8px;
-  letter-spacing: 12px;
-  font-weight: 300;
-}
-
-.name-card p {
-  font-size: 0.9rem;
-  font-weight: 500;
-  background: linear-gradient(to right, #595959, #9e9e9e, #595959);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
 .hero-links {
-  display: flex;
+  display: inline-flex;
   flex-wrap: wrap;
   gap: 8px;
-  width: 100%;
-  margin-top: 16px;
-  align-items: center;
-  justify-content: center;
+  max-width: 400px;
+  padding-bottom: 0;
+  margin-bottom: 0;
 }
 
 .hero-links button {
@@ -546,7 +564,7 @@ h3{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1.5rem 2.5rem;
+    padding: 2.5rem 2.5rem;
     border-radius: 0px;
     gap: 0;
     backdrop-filter: blur(10px);
@@ -569,31 +587,46 @@ h3{
   .hero{
     display: flex;
     justify-content: left;
+    height: auto;
   }
 
   .hero-content {
     max-width: 600px;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 24px;
     text-align: left;
-    margin-bottom: 80px;
+    justify-content: start;
+  }
+
+  .hero-title h1 {
+    max-width: fit-content;
+  }
+
+  .hero-links {
+    max-width:fit-content;
+    order: 1;
+  }
+
+  .hero-description p {
+    max-width: fit-content;
   }
 
   .hero-content p {
     margin: 0px
   }
 
-  .hero-links {
-    justify-content: left;
+  .hero-bottom {
+    flex-direction: column;
+    
   }
 
-  .name-card{
-    padding: 0;
-    width: 100%;
-    margin-bottom: 8px;
-    letter-spacing: 4px;
-    font-weight: 300;
+  .vert-decor, .hor-decor {
+    display: none;
+  }
+
+  .hero-links {
+    justify-content: left;
   }
 
   .skills-wrap .skills {
