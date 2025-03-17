@@ -594,6 +594,13 @@ h3{
   overflow: hidden;
 }
 
+span {
+  color: #E5E6F0;
+}
+.study-hero-s {
+  background-image: url("images/study-bg-s.png");
+}
+
 .study-title{
   text-align: center;
   max-width: 75%;
@@ -750,6 +757,14 @@ h3{
 
 .col-title {
   color: #FFFFFF;
+}
+
+ol {
+  list-style-position: inside;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5rem;
+  padding-left: 2rem;
 }
 
 /* --------------------- Tablet ------------------- */
