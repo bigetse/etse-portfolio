@@ -361,20 +361,27 @@
   
           // Image sets for two scrolling rows
           const imagesRow1 = [
+              "/images/home-credit-card.png",
               "/images/safetoken-pages.gif",
+              "images/home-limit-set.png",
               "/images/qtr-web-dark.gif",
               "/images/qtr-mobile-pages.gif",
               "/images/qtr-home-change.gif",
+              "/images/qhome-mock.png",
               "/images/qtr-jumbotron.gif",
               "/images/qtr-web.gif"
           ];
   
           const imagesRow2 = [
               "/images/opscentral-table-pan.gif",
-              "/images/opscentral-cards.gif",
+              "/images/home-icons.svg",
               "/images/safetoken-home.gif",
               "/images/safetoken-code-use.gif",
-              "/images/safetoken-profile.jpg"
+              "/images/home-upload.png",
+              "/images/safetoken-admin-3.png",
+              "/images/home-dev-console.png",
+              "/images/smarthealth-1.png",
+              "/images/ops-lpg.png"
           ];
   
           // Function to create a scrolling row
@@ -408,6 +415,8 @@
           const row2 = createRow(imagesRow2, "row-2");
           shotsGrid.appendChild(row1);
           shotsGrid.appendChild(row2);
+
+          console.log(shotsGrid.children);
   
           // Function for smooth infinite scrolling
           function startScrolling(row, speed) {
@@ -420,20 +429,20 @@
                   if (!isHovered) {
                       row.scrollLeft += speed;
                       if (row.scrollLeft >= row.scrollWidth - row.clientWidth) {
-                          row.scrollLeft = 0; // Loop back to start
+                          row.scrollLeft = 1; // Loop back to start
                       }
                   }
                   requestAnimationFrame(scroll);
               }
   
-              setTimeout(() => scroll(), 1000); // Delay for images to load
+              setTimeout(() => scroll(), 100); // Delay for images to load
           }
   
           // Start smooth scrolling
           setTimeout(() => {
-              startScrolling(row1, 0.5); // Scroll right slowly
-              startScrolling(row2, -0.5); // Scroll left slowly
-          }, 1500); // Delay ensures images load before scrolling starts
+              startScrolling(row1, 1); // Scroll right slowly
+              startScrolling(row2, 1); // Scroll left slowly
+          }, 1000);
   
           // Close modal when clicking outside the image
           modal.addEventListener("click", function (event) {

@@ -234,8 +234,7 @@ h3{
   display: flex;
   flex-direction: column;
   gap: 6rem;
-  overflow: hidden;
-  box-shadow: inset -20px 8px 12px 2px rgba(24, 0, 49, 0.2);
+  overflow-x: hidden;
 }
 
 .shots-header{
@@ -256,6 +255,8 @@ h3{
   display: flex;
   flex-direction: column;
   gap: 16px;
+  width: 100vw;
+  overflow: hidden;
 }
 
 .shots-row {
@@ -263,9 +264,11 @@ h3{
   gap: 16px;
   overflow-x: auto;
   white-space: nowrap;
-  scroll-behavior: smooth;
-  width: max-content;
+  scroll-behavior: unset !important;
+  width: 150%;
+  max-width: 100vw;
   position: relative;
+  scrollbar-width: none;
 }
 
 .shot {
@@ -727,6 +730,10 @@ span {
 .study-highlight img {
   width: 4rem;
 }
+
+.role-details .skills {
+  justify-content: left;
+  }
 
 .selected-approach {
   position: absolute;
